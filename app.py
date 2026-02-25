@@ -220,7 +220,7 @@ if st.session_state.result:
                 st.rerun()
         else:
             st.markdown(f'<div class="cover-letter-box">{st.session_state.cover}</div>', unsafe_allow_html=True)
-              st.download_button("📥 Download Cover Letter (.docx)",
+            st.download_button("📥 Download Cover Letter (.docx)",
                 data=make_docx(st.session_state.cover),
                 file_name="cover_letter.docx",
                 mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document")
