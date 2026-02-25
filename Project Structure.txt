@@ -1,0 +1,10 @@
+Smart-ATS/
+├── app.py
+├── config.py
+├── prompts.py
+├── helpers.py
+├── pdf_gen.py
+├── docx_gen.py
+├── styles.py
+├── requirements.txt
+└── .env               ← only for local use, NOT pushed to GitHub
