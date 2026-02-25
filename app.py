@@ -220,10 +220,11 @@ if st.session_state.result:
                 st.rerun()
         else:
             st.markdown(f'<div class="cover-letter-box">{st.session_state.cover}</div>', unsafe_allow_html=True)
-            st.download_button("📥 Download Cover Letter (.txt)",
-                data=st.session_state.cover.encode(),
-                file_name="cover_letter.txt", mime="text/plain")
-
+              st.download_button("📥 Download Cover Letter (.docx)",
+                data=make_docx(st.session_state.cover),
+                file_name="cover_letter.docx",
+                mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document")
+          
     # ── TAB 4: Resume Rewriter ─────────────────────────────────────────────
     with tab4:
         st.markdown('<div class="card"><div class="sec-title" style="color:#f59e0b;-webkit-text-fill-color:#f59e0b;">📝 ATS Resume Rewriter</div>', unsafe_allow_html=True)
